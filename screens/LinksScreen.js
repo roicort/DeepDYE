@@ -12,7 +12,7 @@ import {
   View,
 } from 'react-native';
 import { Constants, ImagePicker, Permissions } from 'expo';
-import { Haptic } from 'expo';
+// import { Haptic } from 'expo';
 import { WebBrowser } from 'expo';
 
 export default class App extends Component {
@@ -111,7 +111,7 @@ export default class App extends Component {
   };
   _Saave = () => {
     WebBrowser.openBrowserAsync(this.state.image);
-    Haptic.impact(Haptic.ImpactFeedbackStyle.Heavy)
+    //Haptic.impact(Haptic.ImpactFeedbackStyle.Heavy)
     alert('Reddirecting');
   };
 
@@ -218,7 +218,7 @@ async function uploadImageAsync(uri,selectedcolor) {
       'Content-Type': 'multipart/form-data',
     },
   };
-  Haptic.impact(Haptic.ImpactFeedbackStyle.Success)
+  //Haptic.impact(Haptic.ImpactFeedbackStyle.Success)
   return fetch(apiUrl, options);
 }
 
